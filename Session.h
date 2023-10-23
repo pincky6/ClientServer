@@ -1,14 +1,17 @@
 #pragma once
 #include <asio.hpp>
-#include <queue>
+#include "Message.h"
 
 class Session
 {
 public:
 	Session(asio::ip::tcp::socket&& socket);
 
-	void readMessage();
+	Message readMessage();
 	void sendMessage();
+
+	void disconnect();
+
 	~Session();
 private:
 	asio::ip::tcp::socket socket;
