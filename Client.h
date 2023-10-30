@@ -18,6 +18,7 @@ public:
 private:
 	asio::io_service ios;
 	asio::ip::tcp::endpoint endpoint;
+	asio::ip::tcp::socket socket;
 	Session session;
 };
 
