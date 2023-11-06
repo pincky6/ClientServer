@@ -1,6 +1,6 @@
 #pragma once
 #include "Session.h"
-#include "Message.h"
+#include "constants.h"
 
 class Client
 {
@@ -10,7 +10,7 @@ public:
 	void connect();
 	void dissconnect();
 
-	void send(const std::string&);
+	void send(const Message&);
 	Message receive();
 
 	~Client();
